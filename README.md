@@ -80,6 +80,7 @@ module.exports = function(config) {
 - `browser_version` version of the browser
 - `os` which platform ?
 - `os_version` version of the platform
+- `additionalCapabilities` additional web driver capabilities to pass to browserstack.  Useful for disabling popup blockers, addons, etc.
 
 ### Browserstack iOS simulators
 

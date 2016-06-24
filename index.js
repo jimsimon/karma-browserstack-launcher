@@ -190,6 +190,14 @@ var BrowserStackBrowser = function (
       settings.real_mobile = args.real_mobile
     }
 
+    if (args.additionalCapabilities) {
+      for (var capabilityName in args.additionalCapabilities) {
+        if (args.additionalCapabilities.hasOwnProperty(capabilityName)) {
+          settings[capabilityName] = args.additionalCapabilities[capabilityName]
+        }
+      }
+    }
+
     tunnel.then(function () {
       client.createWorker(settings, function (error, worker) {
         var sessionUrlShowed = false
